@@ -21,6 +21,10 @@ const connection = async () => {
 };
 connection();
 
-app.listen(() => {
+app.get("/", async (req, res) => {
+  await res.send("Welcome to the vault");
+});
+
+app.listen(PORT, () => {
   console.log(`Server is listening on server ${PORT}`);
 });

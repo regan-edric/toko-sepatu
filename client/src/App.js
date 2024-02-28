@@ -5,6 +5,7 @@ import Register from "./Profile/Register";
 import { useEffect, useState } from "react";
 import Login from "./Profile/Login";
 import Footer from "./Components/Footer";
+import About from "./Pages/About";
 
 function NavbarWrapper() {
   const location = useLocation();
@@ -45,6 +46,7 @@ function App() {
         <NavbarWrapper />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
         </Routes>

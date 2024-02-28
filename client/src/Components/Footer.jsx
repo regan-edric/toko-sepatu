@@ -67,7 +67,7 @@ export default function Footer() {
       <footer className="px-32 pt-12 max-md:px-6 text-tulisanputih bg-secondary w-full h-96 max-md:h-full ">
         <div className="grid grid-cols-1 md:grid-cols-3 border-solid border-b-2 border-t-0 border-x-0">
           <div className="kiri">
-            <h3 className="text-2xl font-medium">About Us</h3>
+            <h3 className="text-2xl font-medium py-4">About Us</h3>
             <p className="font-thin">
               regan's sneakers adalah toko sepatu terbaik di Indonesia dengan
               harga termurah dan gratis ongkir ke seluruh Indonesia.
