@@ -104,7 +104,7 @@ export default function Navbar() {
         className="navbar-tengah flex gap-6 md:text-xl text-sm max-md:block after:block max-md:absolute max-md:px-2 max-md:top-full max-md:-right-full max-md:bg-white max-md:text-primary max-md:w-40 max-md:h-screen max-md:transition max-md:duration-300"
       >
         <NavLink
-          to="/"
+          to="/toko-sepatu"
           className="hover:text-secondary inline-block max-md:block max-md:p-4 max-md:text-lg max-md:font-medium "
         >
           Home
