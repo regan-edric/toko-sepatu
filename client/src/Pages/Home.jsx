@@ -37,6 +37,27 @@ export default function Home() {
       disc_price: "Rp. 12.000.000,-",
       price: "Rp. 8.000.000,-",
     },
+    {
+      imgSrc: Anjay,
+      imgAlt: "Apple Watch Series 7 in colors pink, silver, and black",
+      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
+      disc_price: "Rp. 12.000.000,-",
+      price: "Rp. 8.000.000,-",
+    },
+    {
+      imgSrc: Anjay,
+      imgAlt: "Apple Watch Series 7 in colors pink, silver, and black",
+      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
+      disc_price: "Rp. 12.000.000,-",
+      price: "Rp. 8.000.000,-",
+    },
+    {
+      imgSrc: Anjay,
+      imgAlt: "Apple Watch Series 7 in colors pink, silver, and black",
+      title: "Apple Watch Series 7 GPS, Aluminium Case, Starlight Sport",
+      disc_price: "Rp. 12.000.000,-",
+      price: "Rp. 8.000.000,-",
+    },
   ];
 
   const showModal = (product) => {
@@ -162,23 +183,6 @@ export default function Home() {
     },
     // Add more promo items as needed
   ];
-
-  const sliderRef = useRef(null);
-
-  useEffect(() => {
-    if (sliderRef.current) {
-      new Glider(sliderRef.current, {
-        slidesToScroll: 1,
-        slidesToShow: 5.5,
-        draggable: true,
-        dots: ".dots",
-        arrows: {
-          prev: ".glider-prev",
-          next: ".glider-next",
-        },
-      });
-    }
-  }, []);
 
   return (
     <>
@@ -319,6 +323,7 @@ export default function Home() {
           hasArrows
           slidesToShow={1.5}
           draggable
+          hasDots
           responsive={[
             {
               breakpoint: 768,
@@ -330,30 +335,30 @@ export default function Home() {
           ]}
         >
           {products.map((product, index) => (
-            <div key={index} className="p-4" onClick={() => showModal(product)}>
+            <div key={index} className="p-4">
               <Card
                 key={index}
                 className=" max-w-sm"
                 imgSrc={product.imgSrc}
                 imgAlt={product.imgAlt}
               >
-                <NavLink href="#">
-                  <h5 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                <NavLink to="/">
+                  <h5 className="text-lg max-md:text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
                     {product.title}
                   </h5>
                 </NavLink>
-                <div className="flex items-center">
+                <div className="flex items-center max-md:text-sm">
                   <FaStar className="text-yellow-300" />
                   <FaStar className="text-yellow-300" />
                   <FaStar className="text-yellow-300" />
                   <FaStar className="text-yellow-300" />
                   <FaStar className="text-yellow-300" />
                 </div>
-                <p className="line-through text-primary text-sm">
+                <p className="line-throug max-md:text-xs text-primary text-sm">
                   {product.disc_price}
                 </p>
-                <p className="font-semibold text-primary text-xl">
-                  {product.disc_price}
+                <p className="font-semibold max-md:text-sm text-primary text-xl">
+                  {product.price}
                 </p>
                 <div className="flex items-center justify-end">
                   {/* <p className=" font-semibold text-sm text-gray-900 dark:text-white">
@@ -361,13 +366,14 @@ export default function Home() {
                   </p> */}
                   <NavLink
                     ref={detailBtn}
-                    className="text-primary p-2 text-3xl hover:text-secondary"
+                    onClick={() => showModal(product)}
+                    className="text-primary p-2 max-md:text-xl text-3xl hover:text-secondary"
                   >
                     <FaInfoCircle />
                   </NavLink>
                   <NavLink
                     href="#"
-                    className="rounded-lg bg-primary p-2 text-center text-sm font-medium text-white hover:bg-secondary focus:outline-none"
+                    className="rounded-lg max-md:p-1 bg-primary p-2 text-center text-sm font-medium text-white hover:bg-secondary focus:outline-none"
                   >
                     Add to cart
                   </NavLink>
@@ -397,6 +403,7 @@ export default function Home() {
           hasArrows
           slidesToShow={1.5}
           draggable
+          hasDots
           responsive={[
             {
               breakpoint: 768,
@@ -408,7 +415,7 @@ export default function Home() {
           ]}
         >
           {products.map((product, index) => (
-            <div key={index} className="p-4" onClick={() => showModal(product)}>
+            <div key={index} className="p-4">
               <Card
                 key={index}
                 className=" max-w-sm"
@@ -438,6 +445,7 @@ export default function Home() {
                     {product.price}
                   </p> */}
                   <NavLink
+                    onClick={() => showModal(product)}
                     ref={detailBtn}
                     className="text-primary p-2 text-3xl hover:text-secondary"
                   >
@@ -475,6 +483,7 @@ export default function Home() {
           hasArrows
           slidesToShow={1.5}
           draggable
+          hasDots
           responsive={[
             {
               breakpoint: 768,
@@ -486,7 +495,7 @@ export default function Home() {
           ]}
         >
           {products.map((product, index) => (
-            <div key={index} className="p-4" onClick={() => showModal(product)}>
+            <div key={index} className="p-4">
               <Card
                 key={index}
                 className=" max-w-sm"
@@ -494,7 +503,7 @@ export default function Home() {
                 imgAlt={product.imgAlt}
               >
                 <NavLink href="#">
-                  <h5 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+                  <h5 className=" font-semibold tracking-tight text-gray-900 dark:text-white">
                     {product.title}
                   </h5>
                 </NavLink>
@@ -517,6 +526,7 @@ export default function Home() {
                   </p> */}
                   <NavLink
                     ref={detailBtn}
+                    onClick={() => showModal(product)}
                     className="text-primary p-2 text-3xl hover:text-secondary"
                   >
                     <FaInfoCircle />

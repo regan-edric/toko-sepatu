@@ -45,7 +45,7 @@ function App() {
       <BrowserRouter>
         <NavbarWrapper />
         <Routes>
-          <Route path="/toko-sepatu" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />

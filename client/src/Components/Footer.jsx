@@ -1,7 +1,6 @@
 import React from "react";
 import { FaInstagram, FaTiktok, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import { GiExplosiveMaterials } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 
 export default function Footer() {
@@ -84,10 +83,18 @@ export default function Footer() {
           <div className="tengah-kiri md:ml-8 py-4">
             <h3 className="text-2xl font-medium">Bantuan</h3>
             <div className="grid gap-2 mt-2">
-              <NavLink className="hover:text-primary">Home</NavLink>
-              <NavLink className="hover:text-primary">About</NavLink>
-              <NavLink className="hover:text-primary">Collection</NavLink>
-              <NavLink className="hover:text-primary">Support</NavLink>
+              <NavLink to="/" className="hover:text-primary">
+                Home
+              </NavLink>
+              <NavLink to="/about" className="hover:text-primary">
+                About
+              </NavLink>
+              <NavLink to="/collection" className="hover:text-primary">
+                Collection
+              </NavLink>
+              <NavLink to="/support" className="hover:text-primary">
+                Support
+              </NavLink>
             </div>
           </div>
           <div className="tengah-kanan right-5persen">

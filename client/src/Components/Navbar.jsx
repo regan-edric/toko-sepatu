@@ -95,16 +95,16 @@ export default function Navbar() {
   return (
     <nav className="navbar container rounded-b-lg flex justify-between items-center py-2 px-6 fixed top-0 left-0 right-0 z-fullDepan border-2 border-solid border-t-0 border-x-0">
       <div className="navbar-kiri flex justify-center items-center">
-        <NavLink to="/toko-sepatu">
+        <NavLink to="/">
           <img src={Logo} alt="ini logo" />
         </NavLink>
       </div>
       <div
         ref={navbarNavRef}
-        className="navbar-tengah flex gap-6 md:text-xl text-sm max-md:block after:block max-md:absolute max-md:px-2 max-md:top-full max-md:-right-full max-md:bg-white max-md:text-primary max-md:w-40 max-md:h-screen max-md:transition max-md:duration-300"
+        className="navbar-tengah flex gap-6 md:text-xl text-sm max-md:block max-md:absolute max-md:px-2 max-md:top-full max-md:-right-full max-md:bg-white max-md:text-primary max-md:w-40 max-md:h-screen origin-right duration-300"
       >
         <NavLink
-          to="/toko-sepatu"
+          to="/"
           className="hover:text-secondary inline-block max-md:block max-md:p-4 max-md:text-lg max-md:font-medium "
         >
           Home
@@ -138,7 +138,10 @@ export default function Navbar() {
         <NavLink ref={profileBtnRef} className="hover:text-secondary">
           <CgProfile />
         </NavLink>
-        <NavLink ref={hamburgerRef} className="hidden max-md:block">
+        <NavLink
+          ref={hamburgerRef}
+          className="inline-block md:hidden max-md:block transition transform duration-500 ease-linear"
+        >
           <GiHamburgerMenu />
         </NavLink>
       </div>
