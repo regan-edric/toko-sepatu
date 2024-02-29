@@ -95,7 +95,7 @@ export default function Navbar() {
   return (
     <nav className="navbar container rounded-b-lg flex justify-between items-center py-2 px-6 fixed top-0 left-0 right-0 z-fullDepan border-2 border-solid border-t-0 border-x-0">
       <div className="navbar-kiri flex justify-center items-center">
-        <NavLink to="/">
+        <NavLink to="/toko-sepatu">
           <img src={Logo} alt="ini logo" />
         </NavLink>
       </div>
