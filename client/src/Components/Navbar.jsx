@@ -183,9 +183,15 @@ export default function Navbar() {
         </NavLink>
         <NavLink
           to="/login"
-          className="block p-1 max-md:block hover:text-secondary"
+          className="block p-1 max-md:block border-2 border-solid border-x-0 border-t-0 hover:text-secondary"
         >
           Login
+        </NavLink>
+        <NavLink
+          to="/profile"
+          className="block p-1 max-md:block hover:text-secondary"
+        >
+          Profile
         </NavLink>
       </div>
     </nav>

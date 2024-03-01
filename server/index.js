@@ -1,6 +1,8 @@
 const express = require("express");
 const PORT = 3000;
 const { Sequelize } = require("sequelize");
+const routerUsers = require("./routes/users");
+const cors = require("cors");
 const app = express();
 
 const sequelize = new Sequelize({
@@ -11,6 +13,22 @@ const sequelize = new Sequelize({
   host: "127.0.0.1",
 });
 
+app.use(
+  cors({
+    origin: ["http://localhost:3001"],
+    methods: ["POST", "GET", "PATCH", "PUT"],
+    credentials: true,
+  })
+);
+
+app.use(express.json());
+
+app.get("/", (req, res) => {
+  res.send("Welcome to the vault");
+});
+
+app.use(routerUsers);
+
 const connection = async () => {
   try {
     await sequelize.authenticate();
@@ -20,10 +38,6 @@ const connection = async () => {
   }
 };
 connection();
-
-app.get("/", async (req, res) => {
-  await res.send("Welcome to the vault");
-});
 
 app.listen(PORT, () => {
   console.log(`Server is listening on server ${PORT}`);
